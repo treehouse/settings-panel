@@ -4,4 +4,25 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Gotham Rounded", sans-serif;
+}
+
+:root {
+  --primary-bg: #eea15a;
+}
+
+.settings-panel {
+  --panel-bg: #ffffff;
+  --heading-color: #525a5f;
+  --settings-info-color: #747d83;
+  --checkbox-bg-unchecked: #d9d9d9;
+  --checkbox-bg-checked: var(--primary-bg);
+  --checkbox-switch-color: #ffffff;
+}
+.settings-panel.dark {
+  --panel-bg: #46535a;
+  --heading-color: #e5ecf0;
+  --settings-info-color: #e5ecf0;
+  --checkbox-bg-unchecked: #677176;
+  --checkbox-bg-checked: var(--primary-bg);
+  --checkbox-switch-color: #46535a;
 }/*# sourceMappingURL=app.css.map */
