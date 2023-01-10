@@ -26,7 +26,7 @@ Here are our css variables for our dark theme:
 
 When we use JavaScript to build out our UI, we'll use these objects:
 
-````
+```
     {
         title: 'auto save photos',
         uid: 'autoSavePhotos',
@@ -45,5 +45,4 @@ When we use JavaScript to build out our UI, we'll use these objects:
         description: 'toggle a darker theme for the app. this makes the UI easier on the eyes in darker environments.',
         isChecked: false
     }
-    ```
-````
+```
