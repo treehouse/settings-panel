@@ -10,25 +10,3 @@
 :root {
   --primary-bg: #eea15a;
 }
-
-.settings-panel {
-  // css variables by default
-  --panel-bg: #ffffff;
-  --heading-color: #525a5f;
-  --settings-info-color: #747d83;
-
-  --checkbox-bg-unchecked: #d9d9d9;
-  --checkbox-bg-checked: var(--primary-bg);
-  --checkbox-switch-color: #ffffff;
-
-  // css variables with darkMode
-  &.dark {
-    --panel-bg: #46535a;
-    --heading-color: #e5ecf0;
-    --settings-info-color: #e5ecf0;
-
-    --checkbox-bg-unchecked: #677176;
-    --checkbox-bg-checked: var(--primary-bg);
-    --checkbox-switch-color: #46535a;
-  }
-}
