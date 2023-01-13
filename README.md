@@ -1,5 +1,10 @@
 # settings-panel
 
+Primary color: 
+```
+    --primary-bg: #EEA15A;
+```
+
 Here are our css variables for our default, light theme:
 
 ```
