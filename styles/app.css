@@ -18,6 +18,7 @@
   --checkbox-bg-checked: var(--primary-bg);
   --checkbox-switch-color: #ffffff;
 }
+
 .settings-panel.dark {
   --panel-bg: #46535a;
   --heading-color: #e5ecf0;
@@ -25,4 +26,79 @@
   --checkbox-bg-unchecked: #677176;
   --checkbox-bg-checked: var(--primary-bg);
   --checkbox-switch-color: #46535a;
+}
+
+body {
+  background-color: var(--primary-bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/thlogo.png);
+  background-repeat: no-repeat;
+  background-size: 225px;
+  background-position: bottom left;
+}
+
+.settings-panel {
+  background-color: var(--panel-bg);
+  padding: 2rem;
+  width: 80%;
+  max-width: 550px;
+  border-radius: 1rem;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.6s ease;
+}
+
+.settings-panel header {
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  transition: color 0.6s ease;
+}
+
+.settings .setting {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings .setting label {
+  width: 80%;
+}
+.settings .setting label span {
+  color: var(--settings-info-color);
+  display: block;
+  transition: color 0.6s ease;
+}
+.settings .setting label span:last-of-type {
+  font-weight: 300;
+}
+.settings .setting input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: var(--checkbox-bg-unchecked);
+  position: relative;
+  transition: background 0.3s ease;
+}
+.settings .setting input::after {
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background-color: var(--checkbox-switch-color);
+  transition: left 0.3s ease;
+}
+.settings .setting input:checked {
+  background-color: var(--checkbox-bg-checked);
+}
+.settings .setting input:checked::after {
+  left: 70%;
 }/*# sourceMappingURL=app.css.map */

@@ -10,3 +10,99 @@
 :root {
   --primary-bg: #eea15a;
 }
+
+.settings-panel {
+    --panel-bg: #ffffff;
+    --heading-color: #525a5f;
+    --settings-info-color: #747d83;
+
+    --checkbox-bg-unchecked: #d9d9d9;
+    --checkbox-bg-checked: var(--primary-bg);
+    --checkbox-switch-color: #ffffff;
+}
+
+.settings-panel.dark {
+    --panel-bg: #46535a;
+    --heading-color: #e5ecf0;
+    --settings-info-color: #e5ecf0;
+
+    --checkbox-bg-unchecked: #677176;
+    --checkbox-bg-checked: var(--primary-bg);
+    --checkbox-switch-color: #46535a;
+}
+
+body {
+  background-color: var(--primary-bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/thlogo.png);
+  background-repeat: no-repeat;
+  background-size: 225px;
+  background-position: bottom left;
+}
+
+.settings-panel {
+  background-color: var(--panel-bg);
+  padding: 2rem;
+  width: 80%;
+  max-width: 550px;
+  border-radius: 1rem;
+  box-shadow: 0 12px 12px rgba(black, 0.15);
+  transition: background-color .6s ease;
+}
+
+.settings-panel header {
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  transition: color .6s ease;
+}
+
+.settings {
+  .setting {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label {
+      width: 80%;
+      span {
+        color: var(--settings-info-color);
+        display: block;
+        transition: color .6s ease;
+        &:last-of-type {
+          font-weight: 300;
+        }
+      }
+    }
+    input {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 50px;
+      height: 30px;
+      border-radius: 25px;
+      background-color: var(--checkbox-bg-unchecked);
+      position: relative;
+      transition: background .3s ease;
+      &::after {
+        content: '';
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        background-color: var(--checkbox-switch-color);
+        transition: left .3s ease;
+      }
+      &:checked {
+        background-color: var(--checkbox-bg-checked);
+        &::after {
+          left: 70%;
+        }
+      }
+    }
+  }
+}
